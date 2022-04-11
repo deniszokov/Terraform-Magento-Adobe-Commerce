@@ -236,9 +236,9 @@ variable "eventbridge_policy" {
 variable "aws_config_rule" {
   description = "Use AWS Config to evaluate critical configuration settings for your AWS resources."
   default     = {
-  ROOT_ACCOUNT_MFA_ENABLED                  = 
-  MFA_ENABLED_FOR_IAM_CONSOLE_ACCESS        = 
-  EC2_STOPPED_INSTANCE                      = 
+  ROOT_ACCOUNT_MFA_ENABLED                  = ""
+  MFA_ENABLED_FOR_IAM_CONSOLE_ACCESS        = ""
+  EC2_STOPPED_INSTANCE                      = ""
   INCOMING_SSH_DISABLED                     = "AWS::EC2::SecurityGroup"
   DB_INSTANCE_BACKUP_ENABLED                = "AWS::RDS::DBInstance"
   RDS_SNAPSHOTS_PUBLIC_PROHIBITED           = "AWS::RDS::DBSnapshot"
