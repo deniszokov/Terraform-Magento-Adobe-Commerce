@@ -20,7 +20,9 @@ resource "aws_config_config_rule" "this" {
     for_each = { for source_identifier, compliance_resource_types in var.aws_config_rule : 
       source_identifier => compliance_resource_types if compliance_resource_types != ""
     }
+    content {
     compliance_resource_types = ["${scope.value}"]
+    }
   }
   tags = {
     Name = "${local.project}-${each.key}"
